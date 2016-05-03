@@ -12,7 +12,7 @@ class Resource_ARM implements AutoCloseable {
     public void   opOne() { System.out.println(" Run Op One ")          ; } 
     public void   opTwo() { System.out.println(" Run Op Two ")          ; }    
     @Override
-    public void close()   { System.out.println(" CleanUp Connection ")  ; }
+    public void   close() { System.out.println(" CleanUp Connection ")  ; }
 }
 
  public class Resource_02_ARM {
