@@ -8,10 +8,10 @@ package org.inra.around_method_pattern;
 
 class Resource_V1 {  
     
-    public Resource_V1()   { System.out.println("Get Connection.... ")  ; } 
-    public void opOne()    { System.out.println(" Run Op One ")         ; } 
-    public void opTwo()    { System.out.println(" Run Op Two ")         ; }    
-    public void finalize() { System.out.println(" CleanUp Connection ") ; }
+    public Resource_V1() { System.out.println("Get Connection.... ")  ; } 
+    public void opOne()  { System.out.println(" Run Op One ")         ; } 
+    public void opTwo()  { System.out.println(" Run Op Two ")         ; }    
+    public void close()  { System.out.println(" CleanUp Connection ") ; }
 }
 
  public class Resource {
@@ -22,7 +22,7 @@ class Resource_V1 {
          resource.opOne()    ;
          resource.opTwo()    ;
          // Easy to forget cLose + Exception 
-         resource.finalize() ;
+         resource.close() ;
      }
     
  }
