@@ -1,5 +1,5 @@
 
-package com.rac.visitorlambda;
+package com.inra.singleton ;
 
 /**
  *
@@ -14,9 +14,13 @@ public enum Singleton {
    }
 
    public void show() {
-     System.out.println("i = " + i);
+     System.out.println("i = " + i ) ;
    }
   
+   public void doWork() {
+     System.out.println(" Work in Singleton using Enum ") ;
+ }
+   
   public static void main( String[] args) {
      
       Singleton sing1 = Singleton.INSTANCE  ;
@@ -28,6 +32,7 @@ public enum Singleton {
       
       sing1.show()                          ;
       
+      Singleton.INSTANCE.doWork()           ;
   }
 
 }
