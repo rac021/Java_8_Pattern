@@ -2,8 +2,8 @@
 package com.inra.singleton ;
 
 /**
- *
  * @author Rac021
+ * From JAVA 5
  */
 public enum Singleton {
    
