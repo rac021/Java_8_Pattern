@@ -1,4 +1,4 @@
-package com.inra.singleton ;
+package com.inra.enumeration ;
 
 public enum Operation {
     
