@@ -1,3 +1,4 @@
+
 package com.inra.enumeration ;
 
 public enum Operation {
