@@ -13,9 +13,9 @@ public enum Operation {
   
   public static void main ( String[] args )  {
   
-    Operation op = Operation.PLUS      ;
-    double   two = op.eval(1, 1)       ;
-    System.out.println("two = " + two) ;
+    Operation op = Operation.PLUS       ;
+    double   sum = op.eval( 21 , 21 )   ;
+    System.out.println("sum = " + sum)  ;
 
   }
 }
