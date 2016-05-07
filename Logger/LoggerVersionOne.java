@@ -12,7 +12,7 @@ public class HelloWorld {
 
      public static void main(String []args) {
   
-       Logger logger       = msg -> System.out.println(msg);
+       Logger logger       = msg -> System.out.println(msg) ;
        Logger loggerFilter = logger.filter( msg -> msg.contains("Error")) ;
        
        loggerFilter.log("Error disk quota exceeded ") ;
