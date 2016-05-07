@@ -14,8 +14,8 @@ public class HelloWorld {
   
        LoggerLevel loggerLevel = ( level, message ) -> System.out.println( level + " --- " + message ) ;
        
-       Logger loggerError  = loggerLevel.level(Level.ERROR);
-       Logger loggerWarn   = loggerLevel.level(Level.WARN) ;
+       Logger loggerError  = loggerLevel.level(Level.ERROR) ;
+       Logger loggerWarn   = loggerLevel.level(Level.WARN)  ;
       
        loggerError.log("Disk quota exceeded") ; 
        loggerWarn.log("Low disk space") ; 
