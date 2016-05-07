@@ -8,8 +8,22 @@ package org.inra.logger ;
 import java.util.Objects ;
 import java.util.function.Predicate ;
 
-public class HelloWorld {
+public class LoggerWLevel {
 
+    enum Level {  WARN , ERROR ;  }
+    
+    interface Logger {
+        void log( String message ) ;
+    }
+    
+    interface LoggerLevel {
+      void log ( Level level , String message ) ;
+      
+      default Logger level ( Level level ) {
+          return message -> log ( level, message) ;
+      }
+    }
+    
      public static void main(String []args) {
   
        LoggerLevel loggerLevel = ( level, message ) -> System.out.println( level + " --- " + message ) ;
@@ -20,18 +34,4 @@ public class HelloWorld {
        loggerError.log("Disk quota exceeded") ; 
        loggerWarn.log("Low disk space") ; 
      }
-
-    enum Level {  WARN , ERROR ;  }
-    
-    interface LoggerLevel {
-      void log ( Level level , String message ) ;
-      
-      default Logger level ( Level level ) {
-          return message -> log ( level, message) ;
-      }
-    }
-    
-    interface Logger {
-        void log( String message ) ;
-    }
 }
