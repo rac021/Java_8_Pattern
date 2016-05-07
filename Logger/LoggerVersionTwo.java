@@ -8,17 +8,7 @@ package org.inra.logger ;
 import java.util.Objects ;
 import java.util.function.Predicate ;
 
-public class HelloWorld {
-
-     public static void main(String []args) {
-  
-       Logger logger        =  msg -> System.out.println(msg) ;
-       Logger loggerFilter  =  logger.filter ( msg -> msg.contains("Error") ) ;
-       
-       loggerFilter.log("Error : disk quota exceeded ") ;
-       loggerFilter.log("WARN : low disk space ") ; 
-     }
-
+public class LoggerVersionTwo {
 
     interface Logger {
         
@@ -33,4 +23,12 @@ public class HelloWorld {
         }
     }
 
+     public static void main(String []args) {
+  
+       Logger logger        =  msg -> System.out.println(msg) ;
+       Logger loggerFilter  =  logger.filter ( msg -> msg.contains("Error") ) ;
+       
+       loggerFilter.log("Error : disk quota exceeded ") ;
+       loggerFilter.log("WARN : low disk space ") ; 
+     }
 }
