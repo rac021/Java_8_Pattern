@@ -15,8 +15,7 @@ public class HelloWorld {
        Logger logger        =  msg -> System.out.println(msg);
        Logger loggerFilter  =  logger.filter ( msg -> msg.contains("Error") ) ;
        
-       loggerFilter.log("Error : disk quota exceeded ") ; 
-       
+       loggerFilter.log("Error : disk quota exceeded ") ;
        loggerFilter.log("WARN : low disk space ") ; 
      }
 
