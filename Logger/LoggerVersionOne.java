@@ -8,7 +8,7 @@ import java.util.Objects ;
  * @author Rac021
  */
  
-public class HelloWorld {
+public class LoggerVersionOne {
 
     interface Filter {
         boolean accept( String message) ;
