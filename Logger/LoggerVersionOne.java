@@ -10,15 +10,6 @@ import java.util.Objects ;
  
 public class HelloWorld {
 
-     public static void main(String []args) {
-  
-       Logger logger       = msg -> System.out.println(msg) ;
-       Logger loggerFilter = logger.filter( msg -> msg.contains("Error")) ;
-       
-       loggerFilter.log("Error disk quota exceeded ") ;
-       loggerFilter.log("WARN : low disk space ") ; 
-     }
-
     interface Filter {
         boolean accept( String message) ;
     }
@@ -35,4 +26,13 @@ public class HelloWorld {
                 } ;
         }
     }
+
+    public static void main(String []args) {
+  
+       Logger logger       = msg -> System.out.println(msg) ;
+       Logger loggerFilter = logger.filter( msg -> msg.contains("Error")) ;
+       
+       loggerFilter.log("Error disk quota exceeded ") ;
+       loggerFilter.log("WARN : low disk space ") ; 
+     }
 }
