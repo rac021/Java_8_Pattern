@@ -12,7 +12,7 @@ public class HelloWorld {
 
      public static void main(String []args) {
   
-       Logger logger        =  msg -> System.out.println(msg);
+       Logger logger        =  msg -> System.out.println(msg) ;
        Logger loggerFilter  =  logger.filter ( msg -> msg.contains("Error") ) ;
        
        loggerFilter.log("Error : disk quota exceeded ") ;
@@ -25,7 +25,7 @@ public class HelloWorld {
         void log( String message ) ;
         
         default Logger filter ( Predicate<String> filter ) {
-            Objects.requireNonNull(filter );
+            Objects.requireNonNull(filter ) ;
             return 
                 msg -> { 
                     if( filter.test(msg) ) { log(msg) ; }
