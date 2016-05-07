@@ -34,5 +34,4 @@ public class HelloWorld {
     interface Logger {
         void log( String message ) ;
     }
-
 }
