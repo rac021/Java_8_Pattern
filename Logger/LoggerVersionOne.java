@@ -16,15 +16,14 @@ public class HelloWorld {
 
     interface Logger {
         
-        void log( String message ) ;
+       void log( String message ) ;
         
-        default Logger filter ( Filter filter ) {
-            Objects.requireNonNull(filter ) ;
-            return 
-                msg -> { 
+       default Logger filter ( Filter filter ) {
+               Objects.requireNonNull(filter ) ;
+               return  msg -> { 
                     if( filter.accept(msg) ) { log(msg) ; }
                 } ;
-        }
+       }
     }
 
     public static void main(String []args) {
@@ -34,5 +33,5 @@ public class HelloWorld {
        
        loggerFilter.log("Error disk quota exceeded ") ;
        loggerFilter.log("WARN : low disk space ") ; 
-     }
+    }
 }
