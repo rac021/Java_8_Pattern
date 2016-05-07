@@ -1,5 +1,5 @@
 
-package com.rac.visitorlambda;
+package org.inra.logger ;
 
 /**
  *
