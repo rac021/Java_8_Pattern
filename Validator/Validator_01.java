@@ -43,27 +43,27 @@ public class Validator_01 {
 
      class Validation<E, T> {
 
-        private  T t ;
-        private  E e ;
+        private  T value ;
+        private  E error ;
         
-        public Validation <E, T> setOptional( T t ) {
-            this.t = t  ;
-            return this ;
+        public Validation <E, T> setOptional( T value ) {
+            this.value = value ;
+            return this        ;
         }
         
-       public Validation <E, T>  setException( E e ) {
-            this.e = e  ;
-            return this ;
+       public Validation <E, T>  setException( E error ) {
+            this.error = error ;
+            return this        ;
         }
         
         public Optional toOptional() {
-            if(t != null){ return Optional.of(t) ; }
-            return Optional.empty()              ;
+            if( value != null) { return Optional.of(value) ; }
+            return Optional.empty()                        ;
         }
        
         public Optional potentialException() {
-            if(e != null) { return Optional.of(e) ; }
-            return Optional.empty()               ;
+            if( error != null) { return Optional.of(error) ; }
+            return Optional.empty()                        ;
         }
 
     }
